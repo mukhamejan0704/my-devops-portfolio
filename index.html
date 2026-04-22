@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background grid -->
+  <div class="grid-bg"></div>
+  <div class="noise"></div>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo"><span>.</span></a>
+      <ul class="navbar__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="navbar__cta">Get in touch</a>
+      <button class="navbar__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="navbar__mobile" id="mobile-menu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__badge">
+      <span class="dot"></span>
+      <span>Available for collaboration</span>
+    </div>
+    <div class="header__main">
+      <h1 class="header__name">Mukhamejan <br /><em>Abdibek</em></h1>
+      <p class="header__title">Student of Information Systems</p>
+    </div>
+    <div class="header__line"></div>
+  </header>
+
+  <main>
+
+    <!-- Bio Section -->
+    <section class="section bio" id="about">
+      <div class="section__label">01 — About</div>
+      <div class="bio__grid">
+        <div class="bio__text">
+          <h2 class="section__heading">About<br /><span>me.</span></h2>
+          <p>
+            I am interested in Information Systems with a focus on data analytics
+            and machine learning. I enjoy working with data to discover patterns,
+            build predictive models, and support data-driven decision-making.
+            I am developing skills in Python, SQL, and machine learning techniques
+            to analyze and interpret complex datasets. I am especially interested
+            in how machine learning can be used to automate processes, improve
+            accuracy, and solve real-world problems. In the future, I aim to become
+            a Data Analyst or Machine Learning specialist and contribute to intelligent,
+            data-driven systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="section__label">02 — Skills</div>
+      <h2 class="section__heading">Currently <span>learning.</span></h2>
+      <div class="skills__list">
+        <div class="skill-item" style="--i:0">
+          <span class="skill-item__num">01</span>
+          <div class="skill-item__body">
+            <h3>Python (Pandas, NumPy)</h3>
+            <p>Cleaning, processing, and analyzing datasets to identify patterns, trends, and meaningful insights.</p>
+          </div>
+          <div class="skill-item__bar"><div class="skill-item__fill" style="--w:75%"></div></div>
+        </div>
+        <div class="skill-item" style="--i:1">
+          <span class="skill-item__num">02</span>
+          <div class="skill-item__body">
+            <h3>SQL &amp; Databases</h3>
+            <p>Writing queries to store, retrieve, filter, and organize data efficiently for analysis and reporting.</p>
+          </div>
+          <div class="skill-item__bar"><div class="skill-item__fill" style="--w:60%"></div></div>
+        </div>
+        <div class="skill-item" style="--i:2">
+          <span class="skill-item__num">03</span>
+          <div class="skill-item__body">
+            <h3>Machine Learning &amp; Data Modeling</h3>
+            <p>Building predictive models and applying basic machine learning techniques to solve real-world problems.</p>
+          </div>
+          <div class="skill-item__bar"><div class="skill-item__fill" style="--w:85%"></div></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="section__label">04 — Contact</div>
+      <h2 class="section__heading">Let's <span>connect.</span></h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="contact__sub">
+            I'm always open to new opportunities, collaborations, or just a good conversation about technology and systems.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:alex.nurlanov@example.com" class="contact__link">
+              <span class="contact__link-icon">✉</span>
+              <div>
+                <span class="contact__link-label">Email</span>
+                <span class="contact__link-val">mukhamejan@gmail.com</span>
+              </div>
+              <span class="contact__link-arrow">↗</span>
+            </a>
+            <a href="tel:+77001234567" class="contact__link">
+              <span class="contact__link-icon">◎</span>
+              <div>
+                <span class="contact__link-label">Phone</span>
+                <span class="contact__link-val">+7 700 123 45 67</span>
+              </div>
+              <span class="contact__link-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__left">
+      <span>Mukhamejan Abdibek</span>
+      <span class="footer__sep">×</span>
+      <span>Information System</span>
+    </div>
+    <div class="footer__right">
+      Last Deployment: <strong>April 15, 2026</strong>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky navbar shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 40);
+    });
+
+    // Mobile burger toggle
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar__links a, .navbar__mobile a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+</body>
+</html>
