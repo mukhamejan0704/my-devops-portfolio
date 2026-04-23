@@ -11,11 +11,11 @@
 </head>
 <body>
 
-  <!-- Background grid -->
+  
   <div class="grid-bg"></div>
   <div class="noise"></div>
 
-  <!-- Sticky Navbar -->
+  
   <nav class="navbar" id="navbar">
     <div class="navbar__inner">
       <a href="#" class="navbar__logo"><span>.</span></a>
@@ -29,7 +29,7 @@
         <span></span><span></span><span></span>
       </button>
     </div>
-    <!-- Mobile menu -->
+    
     <div class="navbar__mobile" id="mobile-menu">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -37,14 +37,14 @@
     </div>
   </nav>
 
-  <!-- Header -->
+  
   <header class="header">
     <div class="header__badge">
       <span class="dot"></span>
       <span>Available for collaboration</span>
     </div>
     <div class="header__main">
-      <h1 class="header__name">Mukhamejan <br /><em>Abdibek</em></h1>
+      <h1 class="header__name">Mukha <br /><em>Abdibek</em></h1>
       <p class="header__title">Student of Information Systems</p>
     </div>
     <div class="header__line"></div>
@@ -52,7 +52,7 @@
 
   <main>
 
-    <!-- Bio Section -->
+    
     <section class="section bio" id="about">
       <div class="section__label">01 — About</div>
       <div class="bio__grid">
@@ -73,7 +73,7 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+   
     <section class="section skills" id="skills">
       <div class="section__label">02 — Skills</div>
       <h2 class="section__heading">Currently <span>learning.</span></h2>
@@ -106,7 +106,7 @@
     </section>
     
 
-    <!-- Contact Section -->
+   
     <section class="section contact" id="contact">
       <div class="section__label">04 — Contact</div>
       <h2 class="section__heading">Let's <span>connect.</span></h2>
@@ -139,7 +139,7 @@
 
   </main>
 
-  <!-- Footer -->
+  
   <footer class="footer">
     <div class="footer__left">
       <span>Mukhamejan Abdibek</span>
@@ -152,20 +152,20 @@
   </footer>
 
   <script>
-    // Sticky navbar shadow on scroll
+    
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('navbar--scrolled', window.scrollY > 40);
     });
 
-    // Mobile burger toggle
+    
     const burger = document.getElementById('burger');
     const mobileMenu = document.getElementById('mobile-menu');
     burger.addEventListener('click', () => {
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
     });
-    // Close mobile menu on link click
+    
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         burger.classList.remove('open');
@@ -173,7 +173,7 @@
       });
     });
 
-    // Active nav link on scroll
+    
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.navbar__links a, .navbar__mobile a');
     window.addEventListener('scroll', () => {
